@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Directive, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +7,9 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { QuizComponent } from './Components/quiz/quiz.component';
 import { WelcomeComponent } from './Components/welcome/welcome.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ChangeBgDirective } from './change-bg.directive';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { WelcomeComponent } from './Components/welcome/welcome.component';
     FooterComponent,
     HeaderComponent,
     QuizComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ChangeBgDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
